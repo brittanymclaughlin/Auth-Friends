@@ -127,7 +127,7 @@ class FriendsList extends React.Component {
                     this.state.friends.map( (friend) => {
                         return(
                             <div key={friend.id}>
-                                <h4>Name: {friend.name}</h4>
+                                <h4>{friend.name}</h4>
                                 {(!this.state.friend || this.state.friend.id !== friend.id) ? <button onClick={() => this.moreInfo(friend.id)}>More Info</button> : null}
                                 
                                 
@@ -230,6 +230,11 @@ const FriendList = styled.div`
                 border:1px solid white;
                 padding:1%;
                 width:26vw;
+
+                div{
+                    border:0px;
+                    width:95%;
+                }
             }
         }
             
